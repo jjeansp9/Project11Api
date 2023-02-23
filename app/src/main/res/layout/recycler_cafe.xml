@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:id="@+id/date_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_cafe"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/newyork" />
+
+        <TextView
+            android:id="@+id/tv_cafe_name"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_line"
+            android:layout_marginLeft="130dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="가게명"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_cafe_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_cafe_name"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="서울특별시 강서구 XX동"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_cafe_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="130dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="02-263-4342" />
+
+        <ImageView
+            android:id="@+id/iv_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_baseline_favorite_24" />
+
+        <TextView
+            android:id="@+id/tv_line"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/line_edit" />
+
+    </RelativeLayout>
+
+</LinearLayout>
