@@ -139,7 +139,7 @@ public class CafeActivity extends AppCompatActivity {
 
     }// search()
 
-    // Open API를 얻어와서 파싱작업하는 스레드 클래스
+    // Open API를 얻어와서 파싱작업하는 스레드 클래스.
     class CafeThread extends Thread{
         public void run() {
             runOnUiThread(new Runnable() {
