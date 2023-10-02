@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,6 +50,13 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.VH> {
 
 
         CafeAdapter.VH holder= new CafeAdapter.VH(itemView);
+
+        holder.root.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
 
         holder.ivFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,11 +120,11 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.VH> {
 
         ImageView ivCafe, ivFavorite;
         TextView tvCafeName, tvCafeTel, tvCafeAddress;
-
+        LinearLayout root;
 
         public VH(@NonNull View itemView) {
             super(itemView);
-
+            root = itemView.findViewById(R.id.root);
             ivFavorite= itemView.findViewById(R.id.iv_favorite);
             ivCafe= itemView.findViewById(R.id.iv_cafe);
             tvCafeName= itemView.findViewById(R.id.tv_cafe_name);

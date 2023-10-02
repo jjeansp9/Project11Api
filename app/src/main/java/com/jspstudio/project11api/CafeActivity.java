@@ -142,13 +142,6 @@ public class CafeActivity extends AppCompatActivity {
     // Open API를 얻어와서 파싱작업하는 스레드 클래스.
     class CafeThread extends Thread{
         public void run() {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    cafeItems.clear();
-                    adapter.notifyDataSetChanged();
-                }
-            });
 
             String address= "http://openapi.seoul.go.kr:8088/"
                     + apiKey
@@ -176,8 +169,9 @@ public class CafeActivity extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                        adapter.notifyDataSetChanged();
-                                    }
+                                    cafeItems.clear();
+                                    adapter.notifyDataSetChanged();
+                                }
                             });
                             break;
                         case XmlPullParser.START_TAG:
